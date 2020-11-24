@@ -256,8 +256,4 @@ class WhileLoop{
 	}
 }
 
-//lap 8
-//lap 9
-//lap 10
-//lap 11
 
