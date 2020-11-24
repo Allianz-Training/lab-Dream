@@ -1,0 +1,20 @@
+class = Catagories 
+
+Property
+   Type 
+   Example pic
+   theme 
+   
+Action
+   Choose by click
+   Slider to show more catagories 
+
+class = Help centre
+
+Property 
+   search word
+   article
+   catagory
+
+Action 
+   click to open form
