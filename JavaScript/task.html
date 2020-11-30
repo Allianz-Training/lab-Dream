@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+     h2 {
+        color: blue;
+        background-color: red;
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    body {
+        background-color: chocolate;
+    }
+</style>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="in1" type="text" placeholder="Text Color">
+    <input id="in2" type="text" placeholder="Background Color">
+    <button onclick="changeColor()">Change Color</button>
+    <h2 style="padding: 1rem;">Yellow Duck is The Best.</h2>
+
+    <script>
+         function changeColor() {
+            alert('Change color function...')
+            let tcolor = document.querySelector('#in1').value
+            let bcolor = document.querySelector('#in2').value
+            alert(tcolor)
+            alert(bcolor)
+            document.querySelector('h2').style.color = tcolor
+            document.querySelector('h2').style.backgroundColor = bcolor
+
+        }
+        //Lab1
+        let human, name
+        name = 'Dream'
+        human = name
+        console.log(name)
+        console.log(human)
+
+        //Lab2
+        let money, fatherName, motherName, address, galaxyAge
+
+    </script>
+</body>
+</html>
