@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <button onclick="ucFirst('hello')">ucFirst</button>
+    <button onclick="checkSpam('xxx')">checkSpam</button>
+    <button onclick="truncate()">truncate</button>
+    <button onclick="extractCurrencyValue()">extractCurrencyValue</button>
+    <button onclick="arrayTask()">arrayTask</button>
+
+    <script>
+      for (let i = 0; i < 2; i++) {
+        console.log(Math.random(1, 5) * (5 - 1) + 1);
+      }
+
+      console.log("Widget with id".includes("Widget"));
+      console.log("Hello".includes("Buy"));
+
+      //task string
+      function ucFirst(str) {
+        console.log(str[0].toUpperCase() + str.slice(1, 5));
+      }
+
+      function checkSpam(str) {
+        if (str.includes("xxx") || str.includes("viagra")) {
+          console.log(true);
+        } else {
+          console.log(false);
+        }
+      }
+
+      function truncate() {
+        let str = prompt();
+        let maxlenght = prompt() * 1;
+        if (str.lenght >= maxlenght) {
+          console.log(str.slice(0, maxlenght) + "...");
+        } else {
+          console.log(str);
+        }
+      }
+
+      function extractCurrencyValue() {
+        let dollar = prompt();
+        let rate = prompt() * 1;
+        console.log(dollar.slice(1, dollar.length) * rate);
+      }
+
+      //task2
+      function arrayTask() {
+        let styles = ["Jazz", "Blues"];
+        console.log(styles);
+        styles.push("Rock-n-Roll");
+        console.log(styles);
+        styles[1] = "Classic";
+        console.log(styles);
+        styles.shift();
+        console.log(styles);
+        styles.unshift("Rap", "Reggae");
+        console.log(styles);
+      }
+
+      //แบบฝึกหัด array2
+      //1.1
+      function array2task1() {
+        let array1 = [1, 2, 30, 400];
+        let array2 = array1.map((val) => val * 2);
+        console.log(array2);
+      }
+      array2task1();
+
+      //1.2
+      function array2task2() {
+        let array1 = [1, 2, 3, 4];
+        let array2 = array1.map(function (array2) {
+          return array2.toString();
+        });
+        console.log(array2);
+      }
+      array2task2();
+
+      //1.3
+      function array2task3() {
+        let array1 = [1, "1", 2, {}];
+        let array2 = array1.map((val) => typeof val);
+
+        console.log(array2);
+      }
+      array2task3();
+
+      //1.4
+      function array2task4() {
+        let array1 = ["apple", "banana", "object"];
+        let array2 = array1.map((val) => val.toUpperCase());
+        console.log(array2);
+      }
+      array2task4();
+
+      //1.5
+      function array2task5() {
+        let array1 = [
+          { name: "apple", age: 14 },
+          { name: "banaba", age: 18 },
+          { name: "watermelon", age: 32 },
+        ];
+        let array2 = array1.map((val) => val.name);
+        console.log(array2);
+      }
+      array2task5();
+
+      //1.6
+      function array2task6() {
+        let array1 = [
+          { name: "apple", age: 14 },
+          { name: "banaba", age: 18 },
+          { name: "watermelon", age: 32 },
+        ];
+        let array2 = array1.map((val) => val.age);
+        console.log(array2);
+      }
+      array2task6();
+
+      //1.7
+      function array2task7() {
+        let array1 = [
+          { name: "apple", surname: "London" },
+          { name: "banaba", surname: "Bangkok" },
+          { name: "watermelon", surname: "singapore" },
+        ];
+        let array2 = array1.map((val) => val.name + " " + val.surname);
+        console.log(array2);
+      }
+      array2task7();
+
+      //1.8
+      function array2task8() {
+        let array1 = [1, 3, 4, 5, 6, 7, 8];
+        let array2 = array1.map((val) => {
+          if (val % 2 == 0) {
+            return "even";
+          } else {
+            return "odd";
+          }
+        });
+        console.log(array2);
+      }
+      array2task8();
+
+      //1.9
+      function array2task9() {
+        let array1 = [1, -3, 2, 8, -4, 5];
+        let array2 = array1.map((val) => Math.abs(val));
+        console.log(array2);
+      }
+      array2task9();
+
+      //1.10
+      function array2task10() {
+        let array1 = [100, 200.25, 300.84, 400.3];
+        let array2 = array1.map((val) => val.toFixed(2));
+        console.log(array2);
+      }
+      array2task10();
+
+      //1.11
+      function array2task11() {
+        let array1 = [
+          { name: "apple", birth: "2000-01-01" },
+          { name: "banaba", birth: "1990-10-01" },
+          { name: "watermelon", birth: "1985-12-01" },
+        ];
+        let array2 = array1.map((val) => {
+          val.age = "2020" - val.birth.slice(0, 4);
+          return val;
+        });
+        console.log(array2);
+      }
+      array2task11();
+
+      //1.12
+      function array2task12() {
+        let array1 = [
+          { name: "apple", birth: "2000-01-01" },
+          { name: "banaba", birth: "1990-10-01" },
+          { name: "watermelon", birth: "1985-12-01" },
+        ];
+        let months = [
+          "",
+          "Jan",
+          "Feb",
+          "Mar",
+          "Apr",
+          "May",
+          "Jun",
+          "Jul",
+          "Aug",
+          "Sep",
+          "Oct",
+          "Nov",
+          "Dec",
+        ];
+
+        let array2 = array1.map(
+          (val) =>
+            "<td>" +
+            val.name +
+            "</td>" +
+            " <td>" +
+            val.birth.slice(9, 11) +
+            " " +
+            months[val.birth.slice(5, 7)] +
+            " " +
+            val.birth.slice(0, 4) +
+            "</td>" +
+            "</tr>"
+        );
+
+        console.log(array2);
+      }
+      array2task12();
+
+      //2.1
+      function array2task21() {
+        let array1 = [1, 2, 30, 40];
+        let array2 = array1.filter((val) => val > 10);
+        console.log(array2);
+      }
+      array2task21();
+
+      //2.2
+      function array2task22() {
+        let array1 = [1, 2, 3, 4];
+        let array2 = array1.filter((val) => val % 2 == 1);
+        console.log(array2);
+      }
+      array2task22();
+
+      //2.3
+      function array2task23() {
+        let array1 = [1, "1", 2, {}];
+        let array2 = array1.filter((val) => typeof val == "number");
+        console.log(array2);
+      }
+      array2task23();
+
+      //2.4
+      function array2task24() {
+        let array1 = ["apple", "banana", "orange", "pineapple", "watermelon"];
+        let array2 = array1.filter((val) => val.length > 6);
+        console.log(array2);
+      }
+      array2task24();
+
+      //2.5
+      function array2task25() {
+        let array1 = [
+          { name: "apple", age: "14" },
+          { name: "banana", age: "18" },
+          { name: "watermelon", age: "32" },
+          { name: "pineapple", age: "16" },
+          { name: "peach", age: "24" },
+        ];
+        let array2 = array1.filter((val) => val.age < 18);
+        console.log(array2);
+      }
+      array2task25();
+
+      //2.6
+      function array2task26() {
+        let array1 = [
+          { name: "apple", age: "14" },
+          { name: "banana", age: "18" },
+          { name: "watermelon", age: "32" },
+          { name: "pineapple", age: "16" },
+          { name: "peach", age: "24" },
+        ];
+        let array2 = array1.filter((val) => val.age != 32);
+        console.log(array2);
+      }
+      array2task26();
+
+      //2.7
+      function array2task27() {
+        let array1 = [1, -3, 2, 8, -4, 5];
+        let array2 = array1.filter((val) => val >= 0);
+        console.log(array2);
+      }
+      array2task27();
+
+      //2.8
+      function array2task28() {
+        let array1 = [1, 2, 3, 4, 5, 6, 7, 8];
+        let array2 = array1.filter((val) => val % 3 == 0);
+        console.log(array2);
+      }
+      array2task28();
+
+      //2.9
+      function array2task29() {
+        let array1 = ["peach", 1, -3, "2", {}, []];
+        let array2 = array1.filter((val) => typeof val == "string");
+        console.log(array2);
+      }
+      array2task29();
+
+      //2.10
+      function array2task210() {
+        let array1 = ["APPLE", "appLE", "PEACH", "PEach"];
+        let array2 = array1.filter((val) => (val = val.toUpperCase));
+        console.log(array2);
+      }
+
+      //2.11
+      function array2task211() {
+        let array1 = [
+          { name: "apple", birth: "2000-01-01" },
+          { name: "banaba", birth: "1990-10-01" },
+          { name: "watermelon", birth: "1985-12-01" },
+          { name: "peach", birth: "2002-10-13" },
+        ];
+        let array2 = array1.filter((val) => {
+          if (val.birth.slice(5, 7) == "10") return val;
+        });
+      }
+      array2task211();
+      //2.12
+      function array2task212() {
+        let array1 = [
+          { name: "apple", birth: "2000-01-01" },
+          { name: "banaba", birth: "1990-10-01" },
+          { name: "watermelon", birth: "1985-12-01" },
+          { name: "peach", birth: "2002-10-13" },
+        ];
+        let array2 = array1.filter((val) => {
+          if (val.birth.slice(0, 4) - "2000" < "0") return val;
+        });
+      }
+    </script>
+  </body>
+</html>
