@@ -1,0 +1,29 @@
+<div
+  style="
+    width: 400px;
+
+    border: 1px solid gray;
+    text-align: center;
+  "
+>
+  <h2>To Do List</h2>
+  <app-task
+    *ngFor="let t of tasks"
+    [task]="t"
+    (OnDelete)="deleteTask($event)"
+    (OnToggle)="toggleTask($event)"
+  ></app-task>
+
+  <div style="width: 400px; border: 1px solid gray; text-align: center">
+    <strong>Add Task</strong>
+    <div>Name:<input [(ngModel)]="name" /></div>
+
+    <div>Address:<input [(ngModel)]="description" /></div>
+
+    <button (click)="addTask()">Add</button>
+  </div>
+  <app-description
+    [taskName]="name"
+    [description]="description"
+  ></app-description>
+</div>

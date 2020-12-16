@@ -1,0 +1,14 @@
+<div
+  (click)="toggle()"
+  style="
+    width: 400px;
+
+    border: 1px solid gray;
+    text-align: center;
+  "
+>
+  <h4>
+    {{ task.id }}. {{ task.name }}
+    <button (click)="deleteTask()">Delete</button>
+  </h4>
+</div>
