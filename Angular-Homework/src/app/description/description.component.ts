@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class DescriptionComponent implements OnInit {
   @Input()
   taskName: string;
+  @Input()
   description : string;
   constructor() { }
 

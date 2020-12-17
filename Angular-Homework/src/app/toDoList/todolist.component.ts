@@ -22,8 +22,8 @@ export class ToDoListComponent implements OnInit{
         this.tasks = [];
         this.tasks.push({
             id: 1,
-            name: 'Test',
-            description: 'Test description'
+            name: 'Test3',
+            description: 'Test description3'
           });
           this.tasks.push({
             id: 2,
@@ -49,7 +49,6 @@ export class ToDoListComponent implements OnInit{
     }
 
     toggleTask(taskItem: Task) {
-      console.log('e', this.enabledID);
   
       if (this.enabledID === taskItem.id) {
         this.enabledID = 0;
