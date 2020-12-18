@@ -1,0 +1,13 @@
+<div>
+  <h4>
+    currency set<input [(ngModel)]="currency1" /> with amout of:<input
+      [(ngModel)]="amount"
+      type="number"
+    />
+  </h4>
+  <h4>currency compare<input [(ngModel)]="currency2" /></h4>
+  <button (click)="doExchange()" type="button" class="btn btn-primary">
+    Exchange
+  </button>
+  <h4 style="display: inline">Now you got: {{ resultRate }}</h4>
+</div>
