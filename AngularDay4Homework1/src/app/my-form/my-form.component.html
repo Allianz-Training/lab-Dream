@@ -1,0 +1,60 @@
+<div class="container" width="100%">
+  <div class="container" margin="auto" width="50%">
+    <form [formGroup]="form">
+      <label>Name</label>
+      <span style="color: red" *ngIf="form.get('name').errors?.required"
+        >*</span
+      >
+
+      <div>
+        <input
+          formControlName="name"
+          id="exampleFormControlInput1"
+          placeholder="Your answer"
+        />
+      </div>
+
+      <label
+        >Email
+        <span style="color: red" *ngIf="form.get('email').errors?.required"
+          >*</span
+        >
+        <span style="color: red" *ngIf="form.get('email').errors?.email"
+          >Invalid format</span
+        >
+      </label>
+      <div>
+        <input
+          formControlName="email"
+          id="exampleFormControlInput1"
+          placeholder="Your answer"
+        />
+        <small id="emailHelp" class="form-text text-muted"
+          >Eaxmple@mail.com</small
+        >
+      </div>
+
+      <label> Postal Address</label>
+      <span style="color: red" *ngIf="form.get('postal').errors?.required"
+        >*</span
+      >
+      <span style="color: red" *ngIf="form.get('postal').errors?.minlength"
+        >Postal number should be in length 5 digit
+      </span>
+      <div>
+        <input
+          type="postal"
+          formControlName="postal"
+          id="exampleFormControlInput1"
+          placeholder="Your answer"
+        />
+      </div>
+
+      <button [disabled]="form.invalid" (click)="submitForm()">Submit</button>
+    </form>
+  </div>
+</div>
+<!-- <p>Form Data Below</p>
+<code>
+  {{ form.value | json }}
+</code> -->
