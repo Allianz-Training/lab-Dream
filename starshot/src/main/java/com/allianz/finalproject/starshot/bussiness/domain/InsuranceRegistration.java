@@ -59,10 +59,9 @@ public class InsuranceRegistration {
 
   // 17
   @Column(name = "total_price")
-  private Long total_price;
+  private Float total_price;
   // 18
-  @Column(name = "insurance_id")
-  private Integer insurance_id;
+
   // 19
   @Column(name = "event_date")
   private Date event_date;
@@ -82,8 +81,8 @@ public class InsuranceRegistration {
         + ", passport_number=" + passport_number + ", gender=" + gender + ", birth_date="
         + birth_date + ", phone_number=" + phone_number + ", email=" + email + ", nationality="
         + nationality + ", address=" + address + ", promaotion_code=" + promaotion_code
-        + ", total_price=" + total_price + ", insurance_id=" + insurance_id + ", event_date="
-        + event_date + ", event_name=" + event_name + ", sex=" + sex + "]";
+        + ", total_price=" + total_price + ", event_date=" + event_date + ", event_name="
+        + event_name + ", sex=" + sex + "]";
   }
 
   public Integer getPolicy_number() {
@@ -206,21 +205,15 @@ public class InsuranceRegistration {
     this.promaotion_code = promaotion_code;
   }
 
-  public Long getTotal_price() {
+  public Float getTotal_price() {
     return total_price;
   }
 
-  public void setTotal_price(Long total_price) {
+  public void setTotal_price(Float total_price) {
     this.total_price = total_price;
   }
 
-  public Integer getInsurance_id() {
-    return insurance_id;
-  }
 
-  public void setInsurance_id(Integer insurance_id) {
-    this.insurance_id = insurance_id;
-  }
 
   public Date getEvent_date() {
     return event_date;
@@ -253,9 +246,8 @@ public class InsuranceRegistration {
   public InsuranceRegistration(Integer policy_number, Integer event_code, Integer package_code,
       String title_name, String first_name, String last_name, String national_id,
       String passport_number, String gender, Date Date, String phone_number, String email,
-      String nationality, String address, String promaotion_code, Long total_price,
-      Integer insurance_id, Date event_date, String event_name, String sex) {}
-
+      String nationality, String address, String promaotion_code, Float total_price,
+      Date event_date, String event_name, String sex) {}
 
 
 }
