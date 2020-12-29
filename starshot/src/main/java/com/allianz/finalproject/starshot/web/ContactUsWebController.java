@@ -26,7 +26,7 @@ public class ContactUsWebController {
     return "Hello World!";
   }
 
-  @PostMapping("/addcontactus")
+  @PostMapping("/postcontactus")
   public ContactUs addContactUs(@RequestBody ContactUs contactUs) {
     return contactUsRepository.save(contactUs);
 

@@ -20,7 +20,7 @@ public class StarshotApplication {
   @Bean
   public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
     return args -> {
-      System.out.println("Test Test");
+      System.out.println("R E A D Y");
 
     };
   }
