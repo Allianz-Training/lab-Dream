@@ -213,8 +213,6 @@ public class InsuranceRegistration {
     this.total_price = total_price;
   }
 
-
-
   public Date getEvent_date() {
     return event_date;
   }
